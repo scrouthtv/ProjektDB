@@ -37,7 +37,7 @@ select {
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    width: 100%;
+    width: 104.7%;
     height: 40px;
     padding-left: 10px;
     background: rgba(193,193,193,0.4);
@@ -54,13 +54,13 @@ select {
 }
 
 .selector::before {
-    font-family: "times new roman";
-    content: "\f107";
+    font-family: Arial;
+    content: "▼";
     font-size: 20px;
     position: absolute;
-    right: 15px;
+    right: 0px;
     top: -7px;
-    color: #000;
+    color: #000; 
     pointer-events: none;
 
 }
