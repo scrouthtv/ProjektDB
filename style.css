@@ -1,17 +1,28 @@
 body {
-	line-height: 3.5;
-	margin: auto;
+	line-height: 1;
 	text-align: center;
     font-family: 'Open Sans', sans-serif;
+    background-color: rgba(241,241,241,0.6);
 }
-
+#container{
+    background-color: rgba(222,222,222,0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: 600px;
+    padding: 10px;
+    border-radius: 9px;
+}
 table {
 	text-align: left;
 	margin: auto;
+    padding-top: 15px;
 }
 
 label {
-	margin: 15px;
+	margin: 5px;
 
 }
 
@@ -29,7 +40,9 @@ button {
     padding-left: 10px;
     background: rgba(0,192,8,0.6);
     cursor: pointer;
-
+    margin: 15px;
+    color: white;
+    font-family: "SF Pro Text";
 }
 
 select {
@@ -37,7 +50,7 @@ select {
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    width: 104.7%;
+    width: 108.6%;
     height: 40px;
     padding-left: 10px;
     background: rgba(193,193,193,0.4);
@@ -51,18 +64,18 @@ select {
 
 .selector {
     position: relative;
+    margin: 5px;
 }
 
 .selector::before {
     font-family: Arial;
     content: "▼";
-    font-size: 20px;
+    font-size: 17px;
     position: absolute;
-    right: 0px;
-    top: -7px;
+    right: -7px;
+    top: 11px;
     color: #000; 
     pointer-events: none;
-
 }
 
 .middle {
@@ -83,13 +96,13 @@ input {
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
     border-radius: 9px;
     outline: none;
+    margin: 5px;
 }
 
 /*Internet Explorer Müll*/
 
 button::-ms-expand {
     display: none;
-    
 }
 
 select::-ms-expand {
@@ -100,3 +113,4 @@ select::-ms-expand {
 select:focus::-ms-value {
   background-color: transparent;
 }
+
