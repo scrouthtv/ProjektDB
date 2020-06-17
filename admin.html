@@ -17,21 +17,16 @@
 		<div id="container">
 
 			<table id="adminList">
-				<tr id="5">
-					<td>me</td>
-					<td>27</td>
-					<td>Smartboard</td>
-					<td>Schaltet nicht ein</td>
-				</tr>
 				<tr id="11">
-					<td>you</td>
-					<td>31</td>
-					<td>Beamer</td>
-					<td>flackert</td>
+					<td><input disabled value="you" /></td>
+					<td><input disabled value="31" /></td>
+					<td><input disabled value="Beamer" /></td>
+					<td><input disabled value="flackert" /></td>
+					<td><button onclick="pushRemoval(11);">✗</button></td>
 				</tr>
 			</table>
 
-			<button id="reload" onclick="pull()">&#128472;</button>
+			<button class="submit" id="reload" onclick="pull()">&#128472;</button>
 		</div>
 	</body>
 
