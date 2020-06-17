@@ -1,12 +1,14 @@
 :root{
     --red:rgba(244,67,54,0.8);
 }
+
 body {
 	line-height: 1;
 	text-align: center;
     font-family: 'Open Sans',"Lucida Sans Unicode", sans-serif;
     background-color: rgba(241,241,241,0.6);
 }
+
 #container{
     background-color: rgba(222,222,222,0.6);
     position: absolute;
@@ -15,10 +17,11 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     min-width: 600px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 25px;
     box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6)
 }
+
 table {
 	text-align: left;
 	margin: auto;
@@ -27,37 +30,34 @@ table {
 
 label {
 	margin: 5px;
-
+    font-size: 16px;
 }
 
-button {
+input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    font-size: 30px;
-    background: rgba(0,192,8,0.6);
-    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
-    border-radius: 50%;
+    width: 100%;
+    height: 40px;
+    line-height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    background: rgba(193,193,193,0.4);
+    color: #000;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+    border-radius: 9px;
     outline: none;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    margin: 15px;
-    color: white;
-    font-family: "SF Pro Text";
+    margin: 5px;
+    overflow: visible;
 }
 
-button:disabled{
-    background: rgba(244,67,54,0.8);
-    box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
-   /* animation: redtogreen .3s reverse;*/
+datalist {
+    display: none;
 }
-button:enabled{
-    background: rgba(0,192,8,0.6);
-    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
-    animation: redtogreen .3s;
-}
+
+/*
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -90,23 +90,38 @@ select {
     color: #000; 
     pointer-events: none;
 }
-
-input {
+*/
+button {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    width: 100%;
-    height: 40px;
-    padding-left: 10px;
-    background: rgba(193,193,193,0.4);
-    color: #000;
-    font-size: 16px;
-    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
-    border-radius: 9px;
+    font-size: 30px;
+    background: rgba(0,192,8,0.6);
+    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+    border-radius: 50%;
     outline: none;
-    margin: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 15px;
+    color: white;
+    font-family: "SF Pro Text";
+    transition: background .3s, box-shadow .3s;
 }
+
+button:enabled{
+    background: rgba(0,192,8,0.6);
+    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+    /*animation: greentored .3s;*/
+}
+button:disabled{
+    background: rgba(244,67,54,0.8);
+    box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
+   /* animation: redtogreen .3s;*/
+}
+
+/* animations */
 
 @keyframes redtogreen {
   from {
@@ -116,6 +131,16 @@ input {
   to { 
     background: rgba(0,192,8,0.6);
     box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+    }
+}
+@keyframes greentored {
+  from {
+    background: rgba(0,192,8,0.6);
+    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1); 
+    }
+  to { 
+    background: rgba(244,67,54,0.8);
+    box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
     }
 }
 
