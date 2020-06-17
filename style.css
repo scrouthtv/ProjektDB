@@ -1,0 +1,15 @@
+body {
+	line-height: 1.6;
+	margin: auto;
+	text-align: center;
+}
+
+table {
+	text-align: left;
+	margin: auto;
+}
+
+label {
+	margin: 2px;
+}
+
