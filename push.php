@@ -1,5 +1,7 @@
 <?php
 
-echo "0";
+print_r($_GET);
+
+echo 0;
 
 ?>

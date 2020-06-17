@@ -12,39 +12,39 @@
 	</head>
 
 	<body>
-        <img src="logo-1.png" width="400px">
-        <script src="script.js"></script>
+		<img src="logo-1.png" width="400px">
+		<script src="script.js"></script>
 		<div id="container">
-            
-			<table>
-                <tr><td> <label for="who">Ihr Kürzel:</label>
-                </td><td> <input id="who" placeholder="eingeben" oninput="checkInput()"></td></tr>
-                
-                <tr><td><label for="room">Raum:</label>
-                </td><td><input id="room" placeholder="eingeben" oninput="checkInput()"></td></tr>
 
-                <tr><td><label for="what">Fehlerhaftes Gerät:</label>
-                </td><td> <div class="selector"> 
-                    <input placeholder="auswählen oder eingeben" type="enter" id="what"list="what list"oninput="checkInput()"/>
-                    <datalist id="what list">  
-                       <option value="AppleTV">AppleTV</option>
-                       <option value="Batterien">Batterien</option>
-                       <option value="Beamer">Beamer</option>
-                       <option value="CD-/DVD-Spieler">CD-/DVD-Spieler</option>
-                       <option value="Fernseher">Fernseher</option>
-                       <option value="Lautsprecher">Lautsprecher</option>
-                       <option value="Microsoft wireless display adapter">Microsoft wireless display adapter</option>
-                       <option value="Smartboard">Smartboard</option>
-                       <option value="Visualizer">Visualizer</option>
-                    </datalist>
-                </div></td></tr>
-                
-                <tr><td><label for="why">Beschreibung des Fehlers:</label>
-                </td><td><input id="why" placeholder="eingeben" oninput="checkInput()"><br></td></tr>
-            </table>
-            
-			<button id="submit" value disabled>✗</button>
+			<table>
+				<tr><td> <label for="who">Ihr Kürzel:</label>
+					</td><td> <input id="who" placeholder="eingeben" oninput="checkInput()"></td></tr>
+
+					<tr><td><label for="room">Raum:</label>
+						</td><td><input id="room" placeholder="eingeben" oninput="checkInput()"></td></tr>
+
+						<tr><td><label for="what">Fehlerhaftes Gerät:</label>
+							</td><td> <div class="selector">
+									<input placeholder="auswählen oder eingeben" type="enter" id="what"list="what list"oninput="checkInput()"/>
+									<datalist id="what list">
+										<option value="AppleTV">AppleTV</option>
+										<option value="Batterien">Batterien</option>
+										<option value="Beamer">Beamer</option>
+										<option value="CD-/DVD-Spieler">CD-/DVD-Spieler</option>
+										<option value="Fernseher">Fernseher</option>
+										<option value="Lautsprecher">Lautsprecher</option>
+										<option value="Microsoft wireless display adapter">Microsoft wireless display adapter</option>
+										<option value="Smartboard">Smartboard</option>
+										<option value="Visualizer">Visualizer</option>
+									</datalist>
+								</div></td></tr>
+
+								<tr><td><label for="why">Beschreibung des Fehlers:</label>
+									</td><td><input id="why" placeholder="eingeben" oninput="checkInput()"><br></td></tr>
+			</table>
+
+			<button id="submit" onclick="push()" disabled>✗</button>
 		</div>
-    </body>
+	</body>
 
 </html>

@@ -12,12 +12,13 @@ function checkInput() {
 }
 
 function push() {
-	var xhtpp = new XMLHttpRequest();
+	var params = "hello=test"
+	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			alert(xhttp.responseText);
 		}
 	};
-	xhttp.open("GET", "push.php", true);
+	xhttp.open("GET", "push.php" + "?" + params, true);
 	xhttp.send();
 }
