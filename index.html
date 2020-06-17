@@ -16,11 +16,26 @@
 		<div id="container">
 			<table>
 				<tr><td><label for="who">Ihr Kürzel:</label></td><td><input id="who"><br></td></tr>
-				<tr><td><label for="room">In welchem Raum sind Sie:</label></td><td><input id="room"><br></td></tr>
-				<tr><td><label for="what">Welches Gerät ist fehlerhaft:</label></td><td><input id="what"><br></td></tr>
-				<tr><td><label for="why">Was funktioniert nicht:</label></td><td><input id="why"><br></td></tr>
+				<tr><td><label for="room">Raum:</label></td><td><input id="room"><br></td></tr>
+				<tr><td><label for="what">fehlerhaftes Gerät:</label></td>
+                    <td> <div class="selector"> <select name="Gerät" id="Gerät">  
+                        <option style="display:none" value="- bitte auswählen -">- bitte auswählen -</option>
+                        <option disabled="true" value="- bitte auswählen -">- bitte auswählen -</option>
+                        <option value="AppleTV">AppleTV</option>
+                        <option value="Batterien">Batterien</option>
+                        <option value="Beamer">Beamer</option>
+                        <option value="CD-/DVD-Spieler">CD-/DVD-Spieler</option>
+                        <option value="Fernseher">Fernseher</option>
+                        <option value="Lautsprecher">Lautsprecher</option>
+                        <option value="Microsoft wireless display adapter">Microsoft wireless display adapter</option>
+                        <option value="Smartbboard">Smartboard</option>
+                        <option value="Visualizer">Visualizer</option>
+                        <option value="anderes Gerät (bitte angeben)">anderes Gerät (bitte angeben)</option>
+                        </select></div> </td></tr>
+				<tr><td><label for="why">Beschreibung des Fehlers:</label></td><td><input id="why"><br></td></tr>
 			</table>
-			<button>Okay &gt;&gt;</button>
+        
+			<button>submitt</button>
 		</div>
 
 	</body>
