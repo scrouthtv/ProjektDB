@@ -1,7 +1,10 @@
+:root{
+    --red:rgba(244,67,54,0.8);
+}
 body {
 	line-height: 1;
 	text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans',"Lucida Sans Unicode", sans-serif;
     background-color: rgba(241,241,241,0.6);
 }
 #container{
@@ -13,7 +16,8 @@ body {
     transform: translate(-50%, -50%);
     min-width: 600px;
     padding: 10px;
-    border-radius: 9px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6)
 }
 table {
 	text-align: left;
@@ -31,20 +35,29 @@ button {
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    font-size: 16px;
-    box-shadow: 2px 2px 5px 1px rgba(0,192,8,0.6);
-    border-radius: 9px;
-    outline: none;
-    width: 25%;
-    height: 40px;
-    padding-left: 10px;
+    font-size: 30px;
     background: rgba(0,192,8,0.6);
+    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+    border-radius: 50%;
+    outline: none;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     margin: 15px;
     color: white;
     font-family: "SF Pro Text";
 }
 
+button:disabled{
+    background: rgba(244,67,54,0.8);
+    box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
+   /* animation: redtogreen .3s reverse;*/
+}
+button:enabled{
+    background: rgba(0,192,8,0.6);
+    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+    animation: redtogreen .3s;
+}
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -78,10 +91,6 @@ select {
     pointer-events: none;
 }
 
-.middle {
-    color: rgba(0,0,0,0.5);
-}
-
 input {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -97,6 +106,17 @@ input {
     border-radius: 9px;
     outline: none;
     margin: 5px;
+}
+
+@keyframes redtogreen {
+  from {
+    background: rgba(244,67,54,0.8);
+    box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
+    }
+  to { 
+    background: rgba(0,192,8,0.6);
+    box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+    }
 }
 
 /*Internet Explorer Müll*/

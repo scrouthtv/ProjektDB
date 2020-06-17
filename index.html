@@ -12,10 +12,11 @@
 	</head>
 
 	<body>
-
+<img src="logo-1.png" width="400px">
+        <script src="script.js"></script>
 		<div id="container">
 			<table>
-                <tr><td> <label for="who">Ihr Kürzel:</label></td><td> <input id="who">  </td></tr>
+                <tr><td> <label for="who">Ihr Kürzel:</label></td><td> <input id="who" oninput="checkInput()">  </td></tr>
 				<tr><td><label for="room">Raum:</label></td><td><input id="room"></td></tr>
 				<tr><td><label for="what">fehlerhaftes Gerät:</label></td>
                     <td> <div class="selector"> <select name="device" id="device">  
@@ -35,7 +36,7 @@
 				<tr><td><label for="why">Beschreibung des Fehlers:</label></td><td><input id="why"><br></td></tr>
 			</table>
         
-			<button>✓</button>
+			<button id="submit">✓</button>
 		</div>
 
 	</body>
