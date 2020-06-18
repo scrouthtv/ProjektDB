@@ -1,15 +1,17 @@
 <?php
 
 echo "[";
-echo '{"id": 5, "who": "me", "room": 27, "what": "Smartboard", "why": "Schaltet nicht ein"}';
-#echo '{"id": 12, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 11, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 13, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 14, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 15, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 17, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 18, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
-#echo '{"id": 25, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+#echo '{"id": 5, "who": "me", "room": 27, "what": "Smartboard", "why": "Schaltet nicht ein"}';
+#
+echo '{"id": 12, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+#echo '{"id": 11, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"}';
+#
+echo '{"id": 13, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+echo '{"id": 14, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+echo '{"id": 15, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+echo '{"id": 17, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+echo '{"id": 18, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
+echo '{"id": 25, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"}';
 #echo '{"id": 32, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
 #echo '{"id": 22, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';
 #echo '{"id": 23, "who": "you", "room": 31, "what": "Beamer", "why": "flackert"},';

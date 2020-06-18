@@ -29,8 +29,8 @@ body {
 
 .adminX {
 	position: absolute;
-	right: 0px;
-	top: 15px;
+	right: 5px;
+	top: 10px;
 	min-width: 5%;
 }
 
@@ -49,6 +49,22 @@ body {
 
 .adminWhy::before {
 	content: "->";
+}
+
+button.removeButton {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	font-size: 30px;
+	line-height: 30px;
+	padding-bottom: 15px;
+	padding-left: 7px;
+	border-radius: 50%;
+	height: 36px;
+	width: 36px;
+	color: rgb(222, 222, 222);
+	background-color: var(--input-shadow);
 }
 
 button.submit {
