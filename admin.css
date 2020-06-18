@@ -4,13 +4,6 @@ body {
 	background-color: rgba(241, 241, 241, 0.6);
 }
 
-#container{
-	min-width: 600px;
-	max-width: 80vw;
-	padding: 15px;
-	border-radius: 25px;
-}
-
 .container{
 	background-color: rgba(222,222,222,0.6);
 	box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6);
