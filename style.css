@@ -70,7 +70,7 @@ label {
 	/* mobile view, idk if this works */
 }
 
-@media (max-height: 1000px) {
+@media (max-height: 800px) {
 	img.headlogo {
 		width: 200px;
 		left: 10px;
@@ -81,7 +81,7 @@ label {
 	}
 }
 
-@media (min-height: 1080px) {
+@media (min-height: 880px) {
 	img.headlogo {
 		width: 400px;
 		left: 50%;
