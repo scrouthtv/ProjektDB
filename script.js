@@ -56,17 +56,15 @@ function pull() {
 					//document.getElementById("container").insertAdjacentHTML("beforeend", elem);
 				}
 			}
-			for (const item of table.rows) {
+			for (const item of table) {
+				if (item.id == "reload") break;
 				if (list.filter(i => i.id == item.id).length == 0) {
-					//table.deleteRow(item.rowIndex);
+					console.log("have to delete " + item.id);
 					item.style.webkitAnimation = "fadeOut .3s";
 					item.style.animation = "fadeOut .3s";
 
-					//item.addEventListener("webkitAnimationEnd", removeTR(table, item));
-					//item.addEventListener("animationEnd", removeTR(table, item));
-					//item.addEventListener("animationStart", console.log("start"));
-					item.addEventListener("webkitAnimationEnd", ev => {removeTR(table, item)});
-					item.addEventListener("animationend", ev => {removeTR(table, item)});
+					item.addEventListener("webkitAnimationEnd", ev => {item.remove()});
+					item.addEventListener("animationend", ev => {item.remove()});
 				}
 			}
 		}
@@ -85,11 +83,4 @@ function pushRemoval(id) {
 	};
 	xhttp.open("GET", "push.php" + "?" + params, true);
 	xhttp.send();
-}
-
-// Chrome Dev fires both webkitAnimationEndnimationEnd and animationEnd so use
-// function to remove *only one item* after an animation
-function removeTR(table, item) {
-	if (table.rows.namedItem(item.id) != null)
-		table.deleteRow(item.rowIndex)
 }

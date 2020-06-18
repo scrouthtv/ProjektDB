@@ -100,11 +100,7 @@ label {
 	border-radius: 10px;
 }
 
-.adminWho {
-	min-width: 30%;
-}
-
-.adminRoom {
+.adminWho, .adminRoom {
 	min-width: 30%;
 }
 
@@ -114,6 +110,12 @@ label {
 
 .adminX {
 	min-width: 5%;
+}
+
+.adminRoom::after,.adminWho::after {
+	content: "·";
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .adminWhy {
