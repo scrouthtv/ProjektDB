@@ -22,6 +22,46 @@ body {
 	box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6)
 }
 
+img.headlogo {
+	position: absolute;
+	top: 10px;
+}
+
+hr.headlogo {
+	color: black;
+	background-color: black;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+@media (max-width: 1100px) and (orientation: portrait;) {
+	/* mobile view, idk if this works */
+}
+
+@media (max-height: 1000px) {
+	img.headlogo {
+		width: 200px;
+		left: 10px;
+	}
+	hr.headlogo {
+		top: 55px;
+		height: 4px;
+	}
+}
+@media (min-height: 1080px) {
+	img.headlogo {
+		width: 400px;
+		left: 50%;
+		-ms-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	hr.headlogo {
+		top: 109px;
+		height: 6px;
+	}
+}
+
 table {
 	text-align: left;
 	margin: auto;
