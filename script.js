@@ -37,9 +37,9 @@ function pull() {
 					console.log("have to insert " + item);
 
 					//var elem = '<div id="' + item.id + '" class="container adminItem" style="animation: 0.5s;">';
-					var elem = '<span class="adminWho">' + item.who + '</span>';
-					elem += '<span class="adminRoom">' + item.room + '</span>';
+					var elem += '<span class="adminRoom">' + item.room + '</span>';
 					elem += '<span class="adminWhat">' + item.what + '</span>';
+					elem += '<span class="adminWho">' + item.who + '</span>';
 					elem += '<span class="adminX"><button onclick="pushRemoval(' + item.id + ');">✗</button></span>';
 					elem += '<span class="adminWhy">' + item.why + '</span>';
 					//elem += '</div>';
