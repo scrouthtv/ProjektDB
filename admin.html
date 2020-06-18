@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Technikprobleme Admin</title>
+		<meta name="description" content="Projekt DB">
+		<meta name="author" content="Informatikkurs 2020">
+
+		<link rel="stylesheet" href="colors.css" />
+		<link rel="stylesheet" href="admin.css" />
+
+	</head>
+
+	<body>
+		<script src="script.js"></script>
+		<div class="grid-container">
+			<div class="header">
+				<hr class="headlogo" />
+				<img class="headlogo" src="logo-1.png" />
+			</div>
+			<div class="main">
+				<div id="5" class="container adminItem" style="animation: 0.5s ease 0s 1 normal none running fadeIn;">
+					<span class="adminRoom">27</span>
+					<span class="adminWhat">Smartboard</span>
+					<span class="adminWho">me</span>
+					<span class="adminX"><button onclick="pushRemoval(5);">✗</button></span>
+					<span class="adminWhy">Schaltet nicht ein</span>
+				</div>
+				<div id="11" class="container adminItem" style="animation: 0.5s ease 0s 1 normal none running fadeIn;">
+					<span class="adminRoom">31</span>
+					<span class="adminWhat">Beamer</span>
+					<span class="adminWho">you</span>
+					<span class="adminX"><button onclick="pushRemoval(11);">✗</button></span>
+					<span class="adminWhy">flackert</span>
+				</div>
+				<button class="submit" id="reload" onclick="pull()">🗘</button>
+			</div>
+
+		</div>
+	</body>
+
+</html>

@@ -1,12 +1,8 @@
-:root{
-	--red:rgba(244,67,54,0.8);
-}
+@import "layout.css";
 
 body {
-	line-height: 1;
 	text-align: center;
-	font-family: 'Open Sans',"Lucida Sans Unicode", sans-serif;
-	background-color: rgba(241,241,241,0.6);
+	background-color: var(--body-background);
 }
 
 #container{
@@ -21,22 +17,9 @@ body {
 }
 
 .container{
-	background-color: rgba(222,222,222,0.6);
-	box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6);
+	background-color: var(--content-background);
+	box-shadow: 2px 2px 5px 1px var(--content-background);
 	margin: 10px;
-}
-
-img.headlogo {
-	position: absolute;
-	top: 10px;
-}
-
-hr.headlogo {
-	color: black;
-	background-color: black;
-	position: absolute;
-	left: 0px;
-	width: 100%;
 }
 
 table {
@@ -50,88 +33,6 @@ label {
 	font-size: 16px;
 }
 
-@media only print {
-	.headlogo {
-		display: none;
-	}
-
-	#container {
-		width: 100%;
-		height: 100%;
-	}
-
-	button {
-		display: none;
-		box-shadow: none;
-	}
-}
-
-@media (max-width: 1100px) and (orientation: portrait;) {
-	/* mobile view, idk if this works */
-}
-
-@media (max-height: 800px) {
-	img.headlogo {
-		width: 200px;
-		left: 10px;
-	}
-	hr.headlogo {
-		top: 55px;
-		height: 4px;
-	}
-}
-
-@media (min-height: 880px) {
-	img.headlogo {
-		width: 400px;
-		left: 50%;
-		-ms-transform: translate(-50%, 0%);
-		transform: translate(-50%, 0%);
-	}
-	hr.headlogo {
-		top: 109px;
-		height: 6px;
-	}
-}
-
-.adminItem {
-	text-align: left;
-	width: 100%;
-	padding: 5px;
-	border-radius: 10px;
-}
-
-.adminWho, .adminRoom {
-	min-width: 30%;
-}
-
-.adminWhat {
-	min-width: 35%;
-}
-
-.adminX {
-	position: absolute;
-	right: 0px;
-	min-width: 5%;
-}
-
-.adminRoom::after,.adminWho::after {
-	content: "·";
-	margin-left: 3px;
-	margin-right: 3px;
-}
-
-.adminWhy {
-	width: 100%;
-	display: block;
-	text-align: left;
-	margin: 5px;
-}
-
-.adminWhy::before {
-	content: "->";
-}
-
 input {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -142,10 +43,10 @@ input {
 	line-height: 25px;
 	padding: 5px;
 	padding-left: 10px;
-	background: rgba(193,193,193,0.4);
-	color: #000;
+	background: var(--input-bg);
+	color: black;
 	font-size: 16px;
-	box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 5px 1px var(--input-shadow);
 	border-radius: 9px;
 	outline: none;
 	margin: 5px;
@@ -156,119 +57,56 @@ datalist {
 	display: none;
 }
 
-/*
-select {
--moz-appearance: none;
--webkit-appearance: none;
-appearance: none;
-border: none;
-width: 108.6%;
-height: 40px;
-padding-left: 10px;
-background: rgba(193,193,193,0.4);
-color: #000;
-font-size: 16px;
-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
-border-radius: 9px;
-outline: none;
-cursor: pointer;
+button.submit {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	font-size: 30px;
+	background: rgba(0,192,8,0.6);
+	box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
+	border-radius: 50%;
+	outline: none;
+	width: 60px;
+	height: 60px;
+	margin: 15px;
+	color: white;
+	font-family: "SF Pro Text";
+	transition: background .3s, box-shadow .3s;
 }
 
-.selector {
-	position: relative;
-	margin: 5px;
+button.submit:enabled{
+	background: var(--green);
+	box-shadow: 2px 2px 2px 2px var(--green-transparent);
+	/*animation: greentored .3s;*/
+	cursor: pointer;
+}
+button.submit:disabled{
+	background: var(--red);
+	box-shadow: 2px 2px 2px 2px var(--red-transparent);
+	/* animation: redtogreen .3s;*/
+	cursor: not-allowed;
 }
 
-.selector::before {
-	font-family: Arial;
-	content: "▼";
-	font-size: 17px;
-	position: absolute;
-	right: -7px;
-	top: 11px;
-	color: #000; 
-	pointer-events: none;
+/* animations */
+
+@keyframes redtogreen {
+	from {
+		background: var(--red);
+		box-shadow: 2px 2px 2px 2px var(--red-transparent);
+	}
+	to {
+		background: var(--green);
+		box-shadow: 2px 2px 2px 2px var(--green-transparent);
+	}
 }
- */
-	button {
-
+@keyframes greentored {
+	from {
+		background: var(--green);
+		box-shadow: 2px 2px 2px 2px var(--green-transparent);
 	}
-	button.submit {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		appearance: none;
-		border: none;
-		font-size: 30px;
-		background: rgba(0,192,8,0.6);
-		box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
-		border-radius: 50%;
-		outline: none;
-		width: 60px;
-		height: 60px;
-		margin: 15px;
-		color: white;
-		font-family: "SF Pro Text";
-		transition: background .3s, box-shadow .3s;
+	to {
+		background: var(--red);
+		box-shadow: 2px 2px 2px 2px var(--red-transparent);
 	}
-
-	button.submit:enabled{
-		background: rgba(0,192,8,0.6);
-		box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
-		/*animation: greentored .3s;*/
-		cursor: pointer;
-	}
-	button.submit:disabled{
-		background: rgba(244,67,54,0.8);
-		box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
-		/* animation: redtogreen .3s;*/
-		cursor: not-allowed;
-	}
-
-	/* animations */
-
-	@keyframes redtogreen {
-		from {
-			background: rgba(244,67,54,0.8);
-			box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
-		}
-		to {
-			background: rgba(0,192,8,0.6);
-			box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
-		}
-	}
-	@keyframes greentored {
-		from {
-			background: rgba(0,192,8,0.6);
-			box-shadow: 2px 2px 2px 2px rgba(0,192,8,0.1);
-		}
-		to {
-			background: rgba(244,67,54,0.8);
-			box-shadow: 2px 2px 2px 2px rgba(244,67,54,0.1);
-		}
-	}
-
-	@keyframes fadeOut {
-		from { opacity: 1; }
-		to { opacity: 0; }
-	}
-
-	@keyframes fadeIn {
-		from { opacity: 0; }
-		to { opacity: 1; }
-	}
-
-	/*Internet Explorer Müll*/
-
-	button::-ms-expand {
-		display: none;
-	}
-
-	select::-ms-expand {
-		display: none;
-
-	}
-
-	select:focus::-ms-value {
-		background-color: transparent;
-	}
-
+}

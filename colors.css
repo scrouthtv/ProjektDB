@@ -1,0 +1,12 @@
+:root{
+	--red: rgba(244, 67, 54, 0.8);
+	--red-transparent: rgba(244, 67, 54, 0.1);
+	--green: rgba(0, 192, 8, 0.6);
+	--green-transparent: rgba(0, 192, 8, 0.1);
+
+	--body-background: rgba(241, 241, 241, 0.6);
+	--content-background: rgba(222, 222, 222, 0.6);
+	--input-bg: rgba(193, 193, 193, 0.4);
+	--input-shadow: rgba(0, 0, 0, 0.3);
+}
+

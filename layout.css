@@ -1,0 +1,90 @@
+body {
+	background-color: red;
+	line-height: 1;
+	font-family: 'Open Sans',"Lucida Sans Unicode", sans-serif;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-rows: 200px 1fr;
+	grid-template-columns: 1fr auto 1fr;
+}
+
+.header {
+	grid-column: 1 / 4;
+	grid-row: 1;
+}
+
+.main {
+	grid-column: 2;
+	grid-row: 2;
+	text-align: center;
+}
+
+img.headlogo {
+	position: absolute;
+	top: 10px;
+}
+
+hr.headlogo {
+	color: black;
+	background-color: black;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+@media only print {
+	.headlogo {
+		display: none;
+	}
+
+	button {
+		display: none;
+		box-shadow: none;
+	}
+}
+
+@media (max-width: 1100px) and (orientation: portrait;) {
+	/* mobile view, idk if this works */
+}
+
+@media (max-height: 800px) {
+	img.headlogo {
+		width: 200px;
+		left: 10px;
+	}
+	hr.headlogo {
+		top: 55px;
+		height: 4px;
+	}
+}
+
+@media (min-height: 880px) {
+	img.headlogo {
+		width: 400px;
+		left: 50%;
+		-ms-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	hr.headlogo {
+		top: 110px;
+		height: 5px;
+	}
+}
+
+/*Internet Explorer Müll*/
+
+button::-ms-expand {
+	display: none;
+}
+
+select::-ms-expand {
+	display: none;
+
+}
+
+select:focus::-ms-value {
+	background-color: transparent;
+}
+
