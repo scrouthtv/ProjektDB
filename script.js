@@ -30,25 +30,30 @@ function pull() {
 		if (this.readyState == 4 && this.status == 200) {
 			//alert(this.responseText);
 			const list = JSON.parse(this.responseText);
-			const table = document.getElementById("adminList");
+			const container = document.getElementById("container");
+			const table = Array.prototype.slice.call(container.children);
 			for (const item of list) {
-				if (table.rows.namedItem(item.id) == null) {
-					var row = table.insertRow(-1);
-					row.id = item.id;
+				if (table.filter(j => j.id == item.id).length == 0) {
+					console.log("have to insert " + item);
 
-					var who = row.insertCell(0);
-					var room = row.insertCell(1);
-					var what = row.insertCell(2);
-					var why = row.insertCell(3);
-					var remove = row.insertCell(4);
-					who.innerHTML = item.who;
-					room.innerHTML = item.room;
-					what.innerHTML = item.what;
-					why.innerHTML = item.why;
-					remove.innerHTML = "<button onclick='pushRemoval(" + item.id + ");'>✗</button>";
+					//var elem = '<div id="' + item.id + '" class="container adminItem" style="animation: 0.5s;">';
+					var elem = '<span class="adminWho">' + item.who + '</span>';
+					elem += '<span class="adminRoom">' + item.room + '</span>';
+					elem += '<span class="adminWhat">' + item.what + '</span>';
+					elem += '<span class="adminX"><button onclick="pushRemoval(' + item.id + ');">✗</button></span>';
+					elem += '<span class="adminWhy">' + item.why + '</span>';
+					//elem += '</div>';
 
-					row.style.webkitAnimation = "fadeIn .5s";
-					row.style.animation = "fadeIn .5s";
+					var div = document.createElement("div");
+					div.id = item.id;
+					div.innerHTML = elem;
+					div.classList.add("container");
+					div.classList.add("adminItem");
+					div.style.animation = "0.5s ease 0s 1 normal none running fadeIn";
+					console.log(div);
+
+					container.insertBefore(div, document.getElementById("reload"));
+					//document.getElementById("container").insertAdjacentHTML("beforeend", elem);
 				}
 			}
 			for (const item of table.rows) {

@@ -17,15 +17,13 @@
 		<script src="script.js"></script>
 		<div id="container">
 
-			<table class="admin" id="adminList">
-				<tr id="5" style="animation: 0.5s ease 0s 1 normal none running fadeIn;">
-					<td>me</td>
-					<td>27</td>
-					<td>Smartboard</td>
-					<td><button onclick="pushRemoval(5);">✗</button></td>
-					<td>Schaltet nicht ein</td>
-				</tr>
-			</table>
+			<div id="5" class="container adminItem" style="animation: 0.5s ease 0s 1 normal none running fadeIn;">
+				<span class="adminWho">me</span>
+				<span class="adminRoom">27</span>
+				<span class="adminWhat">Smartboard</span>
+				<span class="adminX"><button onclick="pushRemoval(5);">✗</button></span>
+				<span class="adminWhy">Schaltet nicht ein</span>
+			</div>
 
 			<button class="submit" id="reload" onclick="pull()">&#128472;</button>
 		</div>

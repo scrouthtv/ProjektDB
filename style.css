@@ -10,7 +10,6 @@ body {
 }
 
 #container{
-	background-color: rgba(222,222,222,0.6);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -19,7 +18,12 @@ body {
 	min-width: 600px;
 	padding: 15px;
 	border-radius: 25px;
-	box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6)
+}
+
+.container{
+	background-color: rgba(222,222,222,0.6);
+	box-shadow: 2px 2px 5px 1px rgba(222,222,222,0.6);
+	margin: 10px;
 }
 
 img.headlogo {
@@ -90,17 +94,37 @@ label {
 	}
 }
 
-table.admin {
-
-}
-
-table.admin tr td:nth-child(5)::before {
-	content: "<br />";
-}
-
-table.admin tr td:nth-child(5) {
-	background-color: red;
+.adminItem {
 	width: 100%;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.adminWho {
+	min-width: 30%;
+}
+
+.adminRoom {
+	min-width: 30%;
+}
+
+.adminWhat {
+	min-width: 35%;
+}
+
+.adminX {
+	min-width: 5%;
+}
+
+.adminWhy {
+	width: 100%;
+	display: block;
+	text-align: left;
+	margin: 5px;
+}
+
+.adminWhy::before {
+	content: "->";
 }
 
 input {
