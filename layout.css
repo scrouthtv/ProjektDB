@@ -1,5 +1,4 @@
 body {
-	background-color: red;
 	line-height: 1;
 	font-family: 'Open Sans',"Lucida Sans Unicode", sans-serif;
 }
@@ -75,16 +74,7 @@ hr.headlogo {
 
 /*Internet Explorer Müll*/
 
-button::-ms-expand {
-	display: none;
-}
-
-select::-ms-expand {
-	display: none;
-
-}
-
-select:focus::-ms-value {
-	background-color: transparent;
-}
+button::-ms-expand { display: none; }
+select::-ms-expand { display: none; }
+select:focus::-ms-value {	background-color: transparent; }
 
