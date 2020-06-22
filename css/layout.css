@@ -1,3 +1,7 @@
+* {
+	box-sizing: inherit;
+}
+
 body {
 	line-height: 1;
 	font-family: 'Open Sans',"Lucida Sans Unicode", sans-serif;
@@ -5,32 +9,46 @@ body {
 
 .grid-container {
 	display: grid;
-	grid-template-rows: 200px 1fr;
+	grid-template-rows: 230px 1fr;
 	grid-template-columns: 1fr auto 1fr;
 }
 
 .header {
 	grid-column: 1 / 4;
 	grid-row: 1;
+	width: 100%;
+}
+.headleft {
+	width: 100%;
+	min-height: 129px;
+	height: 0px;
+	border-bottom: 7px solid #115081;
+	display: block;
+	float: left;
+}
+.logo {
+	position: absolute;
+	vertical-align: middle;
+	background: rgba(246, 246, 246, 1);
+	top: 10px;
+	left: calc(50vw - 235px);
+}
+
+.footer {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.5);
+	background-color: #002746;
+	font-weight: 300;
 }
 
 .main {
 	grid-column: 2;
 	grid-row: 2;
 	text-align: center;
-}
-
-img.headlogo {
-	position: absolute;
-	top: 10px;
-}
-
-hr.headlogo {
-	color: black;
-	background-color: black;
-	position: absolute;
-	left: 0px;
-	width: 100%;
 }
 
 @media only print {
@@ -44,7 +62,7 @@ hr.headlogo {
 	}
 }
 
-@media (max-width: 1100px) and (orientation: portrait;) {
+@media (max-width: 1100px) and (orientation: portrait) {
 	/* mobile view, idk if this works */
 }
 
@@ -77,4 +95,3 @@ hr.headlogo {
 button::-ms-expand { display: none; }
 select::-ms-expand { display: none; }
 select:focus::-ms-value {	background-color: transparent; }
-
