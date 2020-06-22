@@ -84,3 +84,23 @@ function pushRemoval(id) {
 	xhttp.open("GET", "push.php" + "?" + params, true);
 	xhttp.send();
 }
+
+function loadDarkMode(dark) {
+	console.log("hi");
+	var head = document.getElementsByTagName("head")[0];
+	for (var i = 0; i < head.children.length; i++) {
+		if (head.children[i].tagName == "LINK")
+			if (head.children[i].href.endsWith("css/colors.css")) {
+				if (dark) head.children[i].remove();
+				else return true;
+			} else if (head.children[i].href.endsWith("css/dark.css")) {
+				if (!dark) head.children[i].remove();
+				else return true;
+			}
+	}
+	var link = document.createElement("link");
+	link.rel = "stylesheet";
+	if (dark) link.href = "css/dark.css";
+	else link.href = "css/colors.css";
+	return head.appendChild(link);
+}
