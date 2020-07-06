@@ -12,7 +12,11 @@ function checkInput() {
 }
 
 function push() {
-	const params = "action=add"
+	var params = "action=add"
+	params += "&who=" + document.getElementById("who").value;
+	params += "&room=" + document.getElementById("room").value;
+	params += "&what=" + document.getElementById("what").value;
+	params += "&why=" + document.getElementById("why").value;
 	const xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
